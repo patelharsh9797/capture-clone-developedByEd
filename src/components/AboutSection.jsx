@@ -1,5 +1,7 @@
 import React from "react";
 // import styled from "styled-components";
+// TODO framer motion
+import { motion } from "framer-motion";
 
 // TODO Importing Styled components from 'style.jsx'
 import { About, Description, Image, Hide } from "../style";
@@ -12,19 +14,19 @@ const AboutSection = () => {
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div>
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2>
               your <span>DREAMS</span> come
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2>true.</motion.h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills.
