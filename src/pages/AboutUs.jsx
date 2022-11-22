@@ -2,7 +2,7 @@ import React from "react";
 
 // TODO Animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "./animation";
+import { pageAnimation } from "../animation";
 
 // TODO Page components
 import AboutSection from "../components/AboutSection";

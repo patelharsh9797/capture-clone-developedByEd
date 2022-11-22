@@ -5,7 +5,7 @@ import { MovieState } from "../movieState";
 
 // TODO Animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "./animation";
+import { pageAnimation } from "../animation";
 
 // TODO
 const MovieDetail = () => {

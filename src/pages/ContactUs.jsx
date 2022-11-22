@@ -3,7 +3,7 @@ import React from "react";
 
 // TODO Animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "./animation";
+import { pageAnimation } from "../animation";
 
 const ContactUs = () => {
   return (

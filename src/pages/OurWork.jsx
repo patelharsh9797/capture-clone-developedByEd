@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 // TODO Animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "./animation";
+import { pageAnimation } from "../animation";
 
 // Importing Images
 import athlete from "../img/athlete-small.png";
