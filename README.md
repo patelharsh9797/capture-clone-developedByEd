@@ -1,7 +1,9 @@
 # capture-clone-developedByEd
 Learning React with DevelopedByEd
 
-To test the code use the below command:
+The project is created via Vite/React
+
+To run the app use : 
 ```
 npm run dev
 ```
