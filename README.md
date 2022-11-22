@@ -1,5 +1,8 @@
 # capture-clone-developedByEd
 Learning React with DevelopedByEd
 
-//code
+To test the code use the below command:
+```
 npm run dev
+```
+
