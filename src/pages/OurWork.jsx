@@ -4,7 +4,14 @@ import { Link } from "react-router-dom";
 
 // TODO Animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import {
+  pageAnimation,
+  fade,
+  photoAnim,
+  lineAnim,
+  slider,
+  sliderContainer,
+} from "../animation";
 
 // Importing Images
 import athlete from "../img/athlete-small.png";
@@ -20,27 +27,52 @@ const OurWork = () => {
       exit="exit"
       style={{ background: "#fff" }}
     >
+      <motion.div variants={sliderContainer}>
+        <Frame1 variants={slider} />
+        <Frame2 variants={slider} />
+        <Frame3 variants={slider} />
+        <Frame4 variants={slider} />
+      </motion.div>
+
       <Movie>
-        <h2>The Athlete</h2>
-        <div className="line"></div>
+        <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
-          <img src={athlete} alt="Boxing Athlete" />
+          <HideImg>
+            <motion.img
+              variants={photoAnim}
+              src={athlete}
+              alt="Boxing Athlete"
+            />
+          </HideImg>
         </Link>
       </Movie>
 
       <Movie>
-        <h2>The Racer</h2>
-        <div className="line"></div>
+        <motion.h2 variants={fade}>The Racer</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
-          <img src={tracer} alt="A Girl sitting on a Car" />
+          <HideImg>
+            <motion.img
+              variants={photoAnim}
+              src={tracer}
+              alt="A Girl sitting on a Car"
+            />
+          </HideImg>
         </Link>
       </Movie>
 
       <Movie>
-        <h2>Good Times</h2>
-        <div className="line"></div>
+        <motion.h2 variants={fade}>Good Times</motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-racer">
-          <img src={goodTimes} alt="A couple on a Beach" />
+          <HideImg>
+            <motion.img
+              variants={photoAnim}
+              src={goodTimes}
+              alt="A couple on a Beach"
+            />
+          </HideImg>
         </Link>
       </Movie>
     </Work>
@@ -75,5 +107,32 @@ const Work = styled(motion.div)`
 
 const Movie = styled.div`
   padding-bottom: 10rem;
+`;
+
+const HideImg = styled.div`
+  overflow: hidden;
+`;
+
+// Frame Animation while loading the work page
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background-color: #fffebf;
+  z-index: 5;
+`;
+
+const Frame2 = styled(Frame1)`
+  background-color: #ff8efb;
+`;
+
+const Frame3 = styled(Frame1)`
+  background-color: #8ed2ff;
+`;
+
+const Frame4 = styled(Frame1)`
+  background-color: #8effa0;
 `;
 export default OurWork;
