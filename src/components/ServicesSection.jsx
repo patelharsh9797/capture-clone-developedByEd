@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { fade } from "../animation";
+import { useScroll } from "./useScroll";
 
 // TODO Importing Styled components from 'style.jsx'
 import { About, Description, Image } from "../style";
 
-// import images && icons
+// TODO import images && icons
 import home2 from "../img/home2.png";
 import clock from "../img/clock.svg";
 import money from "../img/money.svg";
@@ -12,8 +14,9 @@ import diaphragm from "../img/diaphragm.svg";
 import teamwork from "../img/teamwork.svg";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Services>
+    <Services variants={fade} animate={controls} initial="hidden" ref={element}>
       <Description>
         <h2>
           High <span>quality</span> services
