@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+
 // TODO Global Style
 import GlobalStyle from "./components/GlobalStyle";
 

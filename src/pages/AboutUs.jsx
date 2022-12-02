@@ -1,8 +1,10 @@
 import React from "react";
+import ScrollTop from '../components/ScrollTop'
 
 // TODO Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
+
 
 // TODO Page components
 import AboutSection from "../components/AboutSection";
@@ -20,6 +22,7 @@ const AboutUs = () => {
       <AboutSection />
       <ServicesSection />
       <FaqSection />
+      <ScrollTop />
     </motion.div>
   );
 };

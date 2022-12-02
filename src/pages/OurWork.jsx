@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useScroll } from "../components/useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 // TODO Animations
 import { motion } from "framer-motion";
@@ -90,6 +91,8 @@ const OurWork = () => {
           </HideImg>
         </Link>
       </Movie>
+
+      <ScrollTop />
     </Work>
   );
 };
@@ -113,10 +116,14 @@ const Work = styled(motion.div)`
   }
 
   img {
+    border-radius: 10px;
     width: 100%;
     height: 80vh;
     object-fit: cover;
     object-position: center;
+  }
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
   }
 `;
 
