@@ -1,5 +1,6 @@
 import React from "react";
-// import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 // TODO framer motion
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
@@ -33,7 +34,9 @@ const AboutSection = () => {
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills.
         </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
+        <LinkButton to="/contact" className="btn" variants={fade}>
+          Contact Us
+        </LinkButton>
       </Description>
 
       <Image>
@@ -51,4 +54,8 @@ const AboutSection = () => {
 
 // TODO styled components
 
+const LinkButton = styled(motion(Link))`
+  display: inline-block;
+  margin: 2rem 0 5rem 0;
+`;
 export default AboutSection;

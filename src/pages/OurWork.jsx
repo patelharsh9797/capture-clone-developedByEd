@@ -81,7 +81,7 @@ const OurWork = () => {
       >
         <motion.h2 variants={fade}>Good Times</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
+        <Link to="/work/good-times">
           <HideImg>
             <motion.img
               variants={photoAnim}

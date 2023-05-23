@@ -20,10 +20,12 @@ const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
     }
 
-    button{
+    button,
+    .btn{
         cursor: pointer;
+        text-decoration:none;
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-family: 'Andada Pro', serif;
         padding: 1rem 2rem;
         border: 3px solid #23d997;

@@ -22,7 +22,6 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<AboutUS />}></Route>
